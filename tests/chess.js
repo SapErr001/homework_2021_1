@@ -64,4 +64,11 @@ QUnit.module('Тестируем функцию chess', function () {
 		assert.strictEqual(chess(5), expected);
 		assert.strictEqual(chess('5'), expected);
 	});
+
+	QUnit.test('Аргумент должен приводится к числу', function (assert){
+		assert.strictEqual(chess({n:4}), null);
+		assert.strictEqual(chess([1,2,3]), null);
+		assert.strictEqual(chess("3f3"), null);
+		assert.strictEqual(chess(true), null);
+	});
 });
