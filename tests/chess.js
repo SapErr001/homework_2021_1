@@ -36,5 +36,32 @@ QUnit.module('Тестируем функцию chess', function () {
 		assert.strictEqual(chess(8), expected);
 		assert.strictEqual(chess('8'), expected);
 	});
+	
+	QUnit.test('Шахматная доска 10 на 10', function (assert){
+		const expected = 
+			'* * * * * \n' +
+			' * * * * *\n' +
+			'* * * * * \n' +
+			' * * * * *\n' +
+			'* * * * * \n' +
+			' * * * * *\n' +
+			'* * * * * \n' +
+			' * * * * *\n' +
+			'* * * * * \n' +
+			' * * * * *\n';
 
+		assert.strictEqual(chess(10), expected);
+		assert.strictEqual(chess('10'), expected);
+	});
+
+	QUnit.test('Шахматная доска 5 на 5', function (assert){
+		const expected =
+			'* * *\n' +
+			' * * \n' +
+			'* * *\n' +
+			' * * \n' +
+			'* * *\n';
+		assert.strictEqual(chess(5), expected);
+		assert.strictEqual(chess('5'), expected);
+	});
 });
