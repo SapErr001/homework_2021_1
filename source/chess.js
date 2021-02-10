@@ -32,3 +32,4 @@ const chess = n => {
 
     return resultLine;
 };
+
